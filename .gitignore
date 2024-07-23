@@ -1,0 +1,56 @@
+# Minecraft server files
+world/
+logs/
+crash-reports/
+banned-ips.json
+banned-players.json
+ops.json
+usercache.json
+whitelist.json
+server.properties
+eula.txt
+
+# Mod files (if you're not version controlling these)
+mods/
+config/
+
+# Logs
+*.log
+
+# Docker volumes
+data/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if you're using any Node.js tools)
+node_modules/
+
+# Java compiled files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Temporary files
+*~
+
+# Docker image and container related
+*.tar
+*.tar.gz
