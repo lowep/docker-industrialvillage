@@ -2,29 +2,22 @@ FROM openjdk:17-slim
 
 LABEL maintainer="lowep29"
 
-RUN apt-get update && apt-get install -y curl unzip
+RUN apt-get update && apt-get install -y curl unzip dos2unix
 
-ENV MINECRAFT_VERSION=1.19.2
-ENV FORGE_VERSION=43.2.8
-ENV MODPACK_VERSION=1.0.6
+ENV MINECRAFT_VERSION=1.20.1
+ENV FORGE_VERSION=47.2.14
+ENV MODPACK_VERSION=IV-1.20.1-Serverpack-1.6c
 
-# Set the working directory to /app
 WORKDIR /app
 
-# Copy start.sh into the container at /app
 COPY start.sh /app/start.sh
 
-# Make sure the script is executable
-RUN chmod +x /app/start.sh
+# Convert CRLF to LF
+RUN dos2unix /app/start.sh && chmod +x /app/start.sh
 
-# Create a data directory
 RUN mkdir /data
-
-# Set up a volume for /data
 VOLUME ["/data"]
 
-# Expose the Minecraft port
 EXPOSE 25565
 
-# Run start.sh when the container launches
-CMD ["/app/start.sh"]
+CMD ["/bin/bash", "/app/start.sh"]
