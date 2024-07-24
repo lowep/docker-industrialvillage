@@ -5,7 +5,7 @@ set -x
 cd /data
 
 if ! [[ -f Industrial-Village-$MODPACK_VERSION.zip ]]; then
-  curl -Lo Industrial-Village-$MODPACK_VERSION.zip https://mediafilez.forgecdn.net/files/4553/52/Industrial-Village-$MODPACK_VERSION.zip
+  curl -Lo Industrial-Village-$MODPACK_VERSION.zip https://www.curseforge.com/minecraft/modpacks/industrial-village/download/5545252
   unzip -u -o Industrial-Village-$MODPACK_VERSION.zip -d /data/
 fi
 
